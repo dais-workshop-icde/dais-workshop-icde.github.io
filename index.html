@@ -1,84 +1,203 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAIS Workshop at ICDE 2025</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #007acc;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #007acc;
-            text-decoration: none;
-        }
-        section {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #777;
-        }
-    </style>
+<title>DAIS 2025</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Workshop on Data-AI Systems (co-located with ICDE 2025)">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif}
+h1,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif; color:#563d2d}
+
+:target::before {
+    content: "";
+      display: block;
+        height: 60px; /* fixed header height*/
+          margin: -60px 0 0; /* negative fixed header height */
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  margin: auto;
+  max-width: 1080px;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("hk.jpg");
+  min-height: 10%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
 </head>
 <body>
 
-<header>
-    <h1>DAIS Workshop at ICDE 2025</h1>
-    <p>Data-AI Systems: Innovations and Applications</p>
-</header>
+<!-- Navbar (sit on top) -->
+<div class="w3-top" style="max-width:1080px">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-wide"><img src="logo.png" height=60px></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html#home" class="w3-bar-item w3-button">Home</a>
+      <a href="index.html#cfp" class="w3-bar-item w3-button"><i class="fa"></i>Call for Papers</a>
+      <a href="index.html#dates" class="w3-bar-item w3-button"><i class="fa"></i>Important Dates</a>
+      <a href="index.html#keynote_and_invited" class="w3-bar-item w3-button">Keynotes and Panels</a>
+      <a href="index.html#pc" class="w3-bar-item w3-button"><i class="fa"></i>Program Committee</a>
+      <a href="index.html#program" class="w3-bar-item w3-button">Program</a>
+      <!--a href="accepted.html" class="w3-bar-item w3-button">Accepted Papers</a-->
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#submission">Submission</a>
-    <a href="#contact">Contact</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html#home" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="index.html#cfp" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa"></i>Call for Papers</a>
+  <a href="index.html#dates" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa"></i>Important Dates</a>
+  <a href="index.html#keynote_and_invited" onclick="w3_close()" class="w3-bar-item w3-button">Keynotes and Panels</a>
+  <a href="index.html#pc" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa"></i>Program Committee</a>
+  <a href="index.html#program" onclick="w3_close()" class="w3-bar-item w3-button">Program</a>
 </nav>
 
-<section id="about">
-    <h2>About the Workshop</h2>
-    <p>The DAIS Workshop at ICDE 2025 aims to bring together researchers and practitioners to discuss the latest advancements in Data-AI systems. We will explore innovative applications, challenges, and future directions in this rapidly evolving field.</p>
-</section>
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container" id="home">
+<div class="w3-container" style="padding:120px 16px" id="home" >
+    <p><a class="w3-xlarge" style="color:white; background-color:gray">First Workshop on</a><br>
+    <a class="w3-xxlarge" style="color:white; background-color:gray">Data-AI Systems (DAIS)</a><br>
+    <a class="w3-large" style="color:white; background-color:gray">Co-located with ICDE 2025, Hong Kong, China</a><br>
+    <a class="w3-large" style="color:white; background-color:gray">May 19, 2025 (Monday)</a> 
+    </p>
+</div>
+</header>
 
-<section id="schedule">
-    <h2>Schedule</h2>
-    <p>The detailed schedule will be available closer to the event date. Stay tuned for updates!</p>
-</section>
+<!-- Overview Section -->
+<div class="w3-container" style="padding:0px 0px 0px 10px" id="about">
+<h3>Overview</h3>
+<p>
+The effectiveness of Large Language Models (LLMs)
+in accomplishing various knowledge intensive tasks has led to the
+emergence of compound AI systems where agents, powered by
+LLMs, complete tasks by interacting with external data retrievers,
+tools, and APIs. This new paradigm introduces exciting interdisciplinary 
+challenges and necessitates rethinking approaches
+toward knowledge discovery and information retrieval as well as
+architecture design and usability of data systems. To this end,
+the proposed workshop aims to explore innovative approaches
+towards building data-aware compound AI systems in the era
+of LLMs while balancing objectives such as cost, efficiency,
+robustness, and interpretability. We encourage participation from
+academic and industry researchers as well as practitioners in
+data management, AI, and systems community and aim to foster
+interdisciplinary collaborations. It will be a full-day workshop
+involving invited talks representative of the work done in these
+communities, research presentations, and a panel discussion
+exploring the design space of compound AI systems.</p>
 
-<section id="submission">
-    <h2>Submission Guidelines</h2>
-    <p>We invite submissions of original research papers and demos related to Data-AI systems. Please check back for detailed submission guidelines and deadlines.</p>
-</section>
+<h3>Workshop Chairs</h3>
+<ul style="padding-left:15px;margin-top:0px;margin-bottom:0px">
+	<li><a href="">Nikita Bhutani</a>, Megagon Labs,  <a href="mailto:nikita@megagon.ai">nikita@megagon.ai</a></li>
+	<li><a href="">Michael Cafarella</a>, MIT CSAIL, <a href="mailto:michjc@csail.mit.edu">michjc@csail.mit.edu</a></li>
+	<li><a href="">Anna Fariha</a>, University of Utah, <a href="mailto:afariha@cs.utah.edu">afariha@cs.utah.edu</a></li>
+	<li><a href="">Sainyam Galhotra</a>, Cornell University, <a href="mailto:sg@cs.cornell.edu">sg@cs.cornell.edu</a></li>
+	<li><a href="">Sairam Gurajada</a>, Megagon Labs, <a href="mailto:sairam@megagon.ai">sairam@megagon.ai</a></li>
+	<li><a href="">Sajjadur Rahman</a>, Megagon Labs, <a href="mailto:sajjadur@megagon.ai">sajjadur@megagon.ai</a></li>
+</ul>
+</div>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or inquiries, please reach out to us at <a href="mailto:dais-workshop@icde2025.org">dais-workshop@icde2025.org</a>.</p>
-</section>
+<hr>
 
-<footer>
-    <p>&copy; 2024 DAIS Workshop. All rights reserved.</p>
-</footer>
+
+<!-- CFP -->
+<div class="w3-container" style="padding:0px 0px 0px 10px" id="cfp">
+<h3>Call for Papers</h3>
+
+<p>
+The Workshop on Data-AI Systems (DAIS) calls for papers in the areas of ...
+</p>
+
+<h5>Submission Tracks</h5>
+<p>
+We invite two types of contributions: (1) short papers and (2) long papers.
+</p>
+
+<h5>Submission Instructions</h5>
+<p>
+</p>
+
+
+<h5>Evaluation Criteria and Reviewing Process</h5>
+
+The workshop will follow an anonymous review process, submissions will be
+reviewed in a double-blind manner, assigning at least three reviewers to each
+paper. The meta-reviewer will coordinate the review process, resulting in
+either an acceptance or a rejection.
+
+</div>
+<hr>
+
+<!-- Dates -->
+<div class="w3-container" style="padding:0px 0px 0px 10px" id="dates">
+  <h3>Important Dates</h3>
+    <ul>
+    <li>Paper submission: <b style="color:crimson">January 20, 2025</b>, 11:59pm Pacific Time</li>
+    <li>Notification of acceptance: February 20, 2025</li>
+    <li>Camera-ready copies: February 20, 2025</li>
+    <li>Workshop: February 20, 2025</li>
+    </ul>
+</div>
+
+<hr>
+
+<!-- Org -->
+<div class="w3-container" style="padding:0px 0px 0px 10px" id="pc">
+  <h3>Program Committee</h3>
+  <h4>Co-Chairs</h4>
+    <ul style="padding-left:15px;margin-top:0px;margin-bottom:0px">
+    </ul>
+    
+    <h4>PC Members</h4>
+    <ul style="padding-left:15px;margin-top:0px;margin-bottom:0px">
+    </ul>
+</div>
+
+<hr>
+
+
+ 
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
 
 </body>
 </html>
