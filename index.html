@@ -27,6 +27,28 @@ body, html {
   max-width: 1080px;
 }
 
+.twitter-follow-button {
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff; /* White text */
+            background-color: #000; /* Black background */
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .twitter-follow-button:hover {
+            background-color: #888; /* Darker shade on hover */
+        }
+
+        .twitter-follow-button:active {
+            background-color: #555; /* Even darker on active click */
+        }
+
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
@@ -37,6 +59,22 @@ body, html {
 
 .w3-bar .w3-button {
   padding: 16px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start; /* Ensures both divs start at the same top point */
+}
+
+.left-div {
+  width: 65%; 
+  margin-right:5%;
+}
+
+.right-div {
+  max-height: 100%;
+  width: 30%; 
+  padding-top:0.5%;
 }
 </style>
 </head>
@@ -77,12 +115,16 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container">
-<div class="w3-container" style="padding:120px 16px" id="home" >
-    <p><a class="w3-xlarge" style="color:white; background-color:gray">First Workshop on</a><br>
-    <a class="w3-xxlarge" style="color:white; background-color:gray">Data-AI Systems (DAIS)</a><br>
-    <a class="w3-large" style="color:white; background-color:gray">Co-located with ICDE 2025, Hong Kong, China</a><br>
-    <a class="w3-large" style="color:white; background-color:gray">May 19, 2025 (Monday)</a> 
+<div class="w3-container" style="padding:10px 16px" id="home" >
+    <p style="margin-top:150px"><a class="w3-xlarge" style="color:white; background-color:black;">First Workshop on</a><br>
+    <a class="w3-xxlarge" style="color:white; background-color:black">Data-AI Systems (DAIS)</a><br>
+    <a class="w3-large" style="color:white; background-color:black">Co-located with ICDE 2025, Hong Kong, China</a><br>
+    <a class="w3-large" style="color:white; background-color:black">May 19, 2025 (Monday)</a> 
     </p>
+		<div style="height:100%; margin-top:5%">
+			<a href="https://twitter.com/intent/follow?ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5EDAIS_workshop&region=follow_link&screen_name=DAIS_workshop" 
+			class="twitter-follow-button" style="float:right" data-show-count="false">Follow on X</a>		
+		</div>
 </div>
 </header>
 
@@ -91,8 +133,8 @@ body, html {
 
 
 
-  <div style="display: flex;">
-    <div style="width: 65%; margin-right:5%">
+  <div class="container">
+    <div class="left-div">
 		<p> Large language models (LLMs) have garnered significant interest due to
 		their impressive capabilities on a wide range of tasks. However, integrating
 		LLM-powered agents in applications that operate over complex data ecosystems
@@ -112,24 +154,18 @@ body, html {
 		presentations, and a panel discussion exploring the design space of compound AI
 		systems. </p>
     </div>
-    <div style="width: 30%; padding-top:2%">	
-		<div>
-			<a href="https://twitter.com/DAIS_workshop?ref_src=twsrc%5Etfw" class="twitter-follow-button" style="float:right" data-show-count="false">Follow DAIS@ICDE on X</a>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="right-div">			
+		<div style="height:8%; margin-bottom:1%">
+			<h4 style="overflow:auto">Announcements</h4>
 		</div>
-		
-		<div style="height:300px; overflow:scroll">
-			<h4>Announcements</h4>
-			<ul>
-				
+		<div style="overflow:scroll; overflow-y: auto; height:95%; padding-bottom:5%;margin-right:2% ">
 
+			<ul>											
 				
-				<li>Call for Papers are out!</li>
+				<li>The first call for papers of DAIS 2025 is out!</li>
 
 				<li>We are excited to announce the First Workshop on Data-AI
-				Systems@ICDE 2025 (DAIS). The workshop will focus on exploring innovative
-				approaches towards building data-aware compound AI systems in the LLM era.
-				</li>			
+				Systems@ICDE 2025 (DAIS).</li>
 				
 			</ul>
 		</div>
@@ -292,7 +328,7 @@ in a final decision to either accept or reject the submission.</p>
 </div>
 <hr>
 
-<div style="padding-top:100px"/>
+<div style="padding-top:10px"></div>
 <script>
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
@@ -310,6 +346,21 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+
+function matchHeight() {
+  var leftDiv = document.querySelector('.left-div');
+  var rightDiv = document.querySelector('.right-div');
+  
+  // Get the height of the left-div and set it as the height of the right-div
+  rightDiv.style.height = leftDiv.offsetHeight + 'px';
+}
+
+// Call the function initially to match the heights
+matchHeight();
+
+// Ensure height is recalculated if the window is resized
+window.addEventListener('resize', matchHeight);
+	
 </script>
 
 </body>
