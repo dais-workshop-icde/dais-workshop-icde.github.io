@@ -67,13 +67,13 @@ body, html {
 }
 
 .left-div {
-  width: 65%; 
+  width: 60%; 
   margin-right:5%;
 }
 
 .right-div {
   max-height: 100%;
-  width: 30%; 
+  width: 35%; 
   padding-top:0.5%;
 }
 </style>
@@ -87,11 +87,13 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="index.html#home" class="w3-bar-item w3-button">Home</a>
+      <a href="index.html#keynotepanel" class="w3-bar-item w3-button">Keynotes and Panels</a>
+      <a href="index.html#program" class="w3-bar-item w3-button">Program</a>
+	  <a href="index.html#acpapers" class="w3-bar-item w3-button">Accepted Papers</a>
       <a href="index.html#cfp" class="w3-bar-item w3-button"><i class="fa"></i>Call for Papers</a>
       <a href="index.html#dates" class="w3-bar-item w3-button"><i class="fa"></i>Important Dates</a>
-      <a href="index.html#keynotepanel" class="w3-bar-item w3-button">Keynotes and Panels</a>
       <a href="index.html#org" class="w3-bar-item w3-button"><i class="fa"></i>Organization</a>
-      <a href="index.html#program" class="w3-bar-item w3-button">Program</a>
+
       <!--a href="accepted.html" class="w3-bar-item w3-button">Accepted Papers</a-->
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -131,8 +133,6 @@ body, html {
 <!-- Overview Section -->
 <div class="w3-container" style="padding:0px 0px 0px 10px" id="about">
 
-
-
   <div class="container">
     <div class="left-div">
 		<p> Large language models (LLMs) have garnered significant interest due to
@@ -160,7 +160,14 @@ body, html {
 		</div>
 		<div style="overflow:scroll; overflow-y: auto; height:95%; padding-bottom:5%;margin-right:2% ">
 
-			<ul>				
+			<ul>			
+				
+				<li>The list of accepted papers is now available!</li>
+				
+				<li>The workshop program is now available!</li>	
+				
+				<li>The second keynote speaker announced!</li>
+				
 				<li>The first keynote speaker announced!</li>										
 				
 				<li>The first call for papers of DAIS 2025 is out!</li>
@@ -177,6 +184,109 @@ body, html {
 
 
 <hr>
+
+
+<!-- keynote and panels -->
+<div class="w3-container" style="padding:0px 0px 0px 10px" id="keynotepanel">
+<h2>Keynotes and Panels</h2>
+<div style="width:100%; display:inline-flex">
+	<div style="width:15%"><img style="width:100%" src="z.jpeg"/></div>
+	<div style="padding-left:10px; width:70%"><span><a href="https://d2ip-tub.github.io/zabedjan/" target="_blank">Ziawasch Abedjan</a>
+		 is a Professor of Computer Science and chair of the Data Integration and 
+	Data Preparation Group at Technische Universität Berlin and the BIFOLD center of excellence.</span></div>
+</div>
+<br/>
+<br/>
+<div style="width:100%; display:inline-flex">
+	<div style="width:15%"><img style="width:100%; border:1px solid gray" src="e.jpg"/></div>
+	<div style="padding-left:10px; width:70%"><span><a href="https://megagon.ai/eser-kandogan/" target="_blank">Eser Kandogan</a>		 
+		 is Principal Research Engineer at Megagon Labs where he is
+		 leading research efforts on building enterprise multi-agent platforms.
+		 Between 2000-2019, he was a research staff member at IBM Almaden Research
+		 Center, conducting research on visual analytics, human-computer interaction,
+		 semantic search, and data science and contributing to several IBM products
+		 and patents. He holds a Ph.D. degree from the University of Maryland in
+		 Computer Science.</span>
+	 </div>
+ 	 </div>
+</div>
+<hr>
+
+<!-- Program -->
+	
+<div class="w3-container" style="padding:0px 0px 0px 10px" id="program">
+<h2>Program</h2>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+        <tr>
+            <td>09:00 - 09:10</td>
+            <td>Welcome Address</td>
+        </tr>
+        <tr>
+            <td>09:10 - 10:00</td>
+            <td>Keynote 1 (Ziawasch Abedjan)</td>
+        </tr>
+        <tr>
+            <td>10:00 - 10:30</td>
+            <td>Coffee Break</td>
+        </tr>
+        <tr>
+            <td>10:30 - 12:00</td>
+            <td>Long Paper Session</td>
+        </tr>
+        <tr>
+            <td>12:00 - 13:00</td>
+            <td>Lunch</td>
+        </tr>
+        <tr>
+            <td>13:00 - 14:00</td>
+            <td>Keynote 2 (Eser Kandogan)</td>
+        </tr>
+        <tr>
+            <td>14:00 - 14:50</td>
+            <td>Short Paper Session</td>
+        </tr>
+        <tr>
+            <td>14:50 - 15:15</td>
+            <td>Coffee Break</td>
+        </tr>
+        <tr>
+            <td>15:15 - 16:30</td>
+            <td>Panel Discussion</td>
+        </tr>
+        <tr>
+            <td>16:30 - 17:00</td>
+            <td>Awards and Closing Remarks</td>
+        </tr>
+    </table>
+	
+</div>
+<hr/>
+
+<!--Accepted Papers-->
+
+<!-- keynote and panels -->
+<div class="w3-container" style="padding:0px 0px 0px 10px" id="acpapers">
+<h2>Accepted Papers</h2>
+<h3>Long Papers</h3>
+<ul>
+	<li><strong>SEED: Enhancing Text-to-SQL Performance and Practical Usability Through Automatic Evidence Generation</strong>. Janghyeon Yun (Seoul National University), Sang-goo Lee (Seoul National University)</li>
+	<li><strong>Fine-tuning Large Language Models for Entity Matching</strong>. Aaron Steiner (University of Mannheim), Ralph Peeters (University of Mannheim), Christian Bizer (University of Mannheim)</li>
+	<li><strong>Orchestrating Agents and Data for Enterprise: A Blueprint Architecture for Compound AI</strong>. Eser Kandogan (Megagon Labs), Nikita Bhutani (Megagon Labs), Dan Zhang (Megagon Labs), Rafael Li Chen (Megagon Labs), Sairam Gurajada (Megagon Labs), Estevam Hruschka (Megagon Labs)</li>
+</ul>
+
+<h3>Short Papers</h3>
+<ul>
+	<li><strong>Data Cleaning Using Large Language Models</strong>. Shuo Zhang (Columbia University), Zezhou Huang (Columbia University), Eugene Wu (DSI, Columbia University)</li>
+	<li><strong>SLPerf: A Research Library and Benchmark Framework for Split Learning</strong>. Zhanyi Hu (East China Normal University), Tianchen Zhou (East China Normal University), Bingzhe Wu (Tencent AI Lab), Cen Chen (East China Normal University), Yanhao Wang (East China Normal University)</li>
+	<li><strong>Agentic Workflows for Extraction of Access Control Matrices from Policy Documents</strong>. Pranav Subramaniam (University of Chicago), Sanjay Krishnan (University of Chicago)</li>
+	<li><strong>Towards Regaining Control over Messy Machine Learning Pipelines [Vision]</strong>. Stefan Grafberger (BIFOLD & TU Berlin), Hao Chen (BIFOLD & TU Berlin), Olga Ovcharenko (BIFOLD & TU Berlin), Sebastian Schelter (BIFOLD & TU Berlin)</li>
+</ul>
+</div>
+<hr/>
 
 <!-- CFP -->
 <div class="w3-container" style="padding:0px 0px 0px 10px" id="cfp">
@@ -274,18 +384,6 @@ in a final decision to either accept or reject the submission.</p>
 <hr>
 
 
-<!-- keynote and panels -->
-<div class="w3-container" style="padding:0px 0px 0px 10px" id="keynotepanel">
-<h2>Keynotes and Panels</h2>
-<div style="width:50%; display:inline-flex">
-	<div style="width:35%"><img style="width:100%" src="z.jpeg"/></div>
-	<div style="padding-left:10px; width:50%"><span><a href="https://d2ip-tub.github.io/zabedjan/" target="_blank">Ziawasch Abedjan</a>
-		 is a Professor of Computer Science and chair of the Data Integration and 
-	Data Preparation Group at Technische Universität Berlin and the BIFOLD center of excellence.</span></div>
-</div>
-</div>
-<hr>
-
 
 <!-- Organization -->
 <div class="w3-container" style="padding:0px 0px 0px 10px" id="org">
@@ -326,12 +424,6 @@ in a final decision to either accept or reject the submission.</p>
 <li>Jia Zou (Arizona State University)</li>
 <li>Amine Mhedhbi (Polytechnique Montréal)</li>
 </ul>
-</div>
-<hr>
-
-<div class="w3-container" style="padding:0px 0px 0px 10px" id="program">
-<h2>Program</h2>
-<p>Coming soon!</p>
 </div>
 <hr>
 
